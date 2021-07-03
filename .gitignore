@@ -1,1 +1,4 @@
 uploads
+.DS_Store
+index.php
+plugins/index.php
