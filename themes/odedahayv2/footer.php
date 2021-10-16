@@ -16,7 +16,7 @@
             <div class="modal">
                 <button class="close-btn" id="close"><i class="fa fa-times"></i> </button>
                 <div class="modal-header">
-                    <h3><i class="fas fa-envelope"></i> Get in Touch</h3>
+                    <h3><i class="fas fa-envelope"></i> Get in Touch :)</h3>
                 </div>
                 <div class="modal-content">
                     
