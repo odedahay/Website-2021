@@ -55,14 +55,43 @@
         </div>
 
     </section>
-    <h2 class="featured-products-title" style="min-height:200px;">
-       Coming soon...
+    <h2 class="featured-products-title">
+       Latest Works
     </h2>
 
+    <section class="featured-products">
+        <?php
+            $homepagePosts = new WP_Query(array(
+                'post_per_page' => 3,
+                'post_type' => 'post',
+            ));
 
+        while($homepagePosts->have_posts()){
+            $homepagePosts->the_post(); ?>
+
+            <div class="featured-product-item">
+
+                <div style="background-image: url(<?php the_post_thumbnail_url();?>);"
+                    class="featured-product-item-image">
+                </div>
+                <p class="title pt-15">
+                <?php the_title(); ?>
+                </p>
+                <p class="pt-15">
+                    <a href="<?php the_permalink(); ?>" class="button front-btn">
+                        Read More
+                    </a>
+                </p>
+
+            </div>
+
+        <?php } wp_reset_postdata(); ?>
+
+
+    </section>
 
     <h3 class="featured-products-subtitle">
-        <a href="<?php echo site_url('/old/web.html'); ?>">View my old content</a>
+        <a href="<?php echo site_url('/works'); ?>">View more</a>
     </h3>
 
     <section class="section-areas">
